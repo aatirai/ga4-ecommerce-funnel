@@ -1,0 +1,29 @@
+# Cadrage du projet
+
+## Contexte
+La Google Merchandise Store est une boutique en ligne qui vend des produits dérivés Google.
+Les données sont un export GA4 anonymisé, disponible gratuitement dans BigQuery.
+Vous jouez le rôle d'un·e analyste data qui travaille pour l'équipe e-commerce.
+
+## Question business
+Où la boutique perd-elle ses visiteurs entre la visite et l'achat ?
+Quels canaux et quels appareils convertissent le mieux ?
+Que recommander à l'équipe e-commerce ?
+
+## Utilisateurs du futur dashboard
+- Responsable e-commerce : veut savoir à quelle étape on perd le plus de clients.
+- Responsable acquisition (marketing) : veut savoir quels canaux rapportent le plus.
+
+## Périmètre
+Inclus : L'analyse des étapes du parcours d'achat (de la visite à la commande), la comparaison des performances selon les canaux marketing et les types d'appareils, ainsi que la formulation de recommandations stratégiques pour réduire les abandons.
+Exclus : L'analyse détaillée par produit spécifique, la modélisation prédictive des ventes futures, ainsi que le suivi des marges financières nettes et des retours clients.
+
+## Définitions des KPI
+| KPI | Définition | Formule |
+| --- | --- | --- |
+| Session : Une période d'interaction continue d'un visiteur sur le site, comptabilisée à chaque nouvelle arrivée sur la boutique.|
+| Taux de conversion | Part des sessions qui se terminent par un achat | Sessions avec achat ÷ Sessions |
+| Taux de passage d'une étape | Part des sessions qui passent à l'étape suivante | Sessions à l'étape N+1 ÷ Sessions à l'étape N |
+| Taux d'abandon d'une étape | Part des sessions qui s'arrêtent à cette étape | 1 − taux de passage |
+| Panier moyen : Le montant moyen dépensé par un client lors d'un achat validé sur la plateforme. |
+| Chiffre d'affaires : La somme totale des revenus générés par l'ensemble des ventes réalisées sur la période analysée. |
